@@ -1,4 +1,25 @@
-i = 0;
+(define move (n start spare dest) 
+    (if (= n 1)
+        (block 
+            (print start) 
+            (print 0)
+            (print dest)
+        )
+        (block 
+            (move (- n 1) start dest spare) 
+            (print start)
+            (print 0)
+            (print dest)
+            (move (- n 1) spare start dest)
+        )
+    )
+) 
+(define main ()
+    (move 4 1 2 3)
+) 
+    
+    
+    i = 0;
 do 
     i < N-1 && A[i] <= A[i+1]: 
         i = i + 1; 
@@ -9,3 +30,4 @@ do
         A[i+1] = temp; 
         i = 0;
 od
+

@@ -1,0 +1,12 @@
+i = 0;
+do 
+    i < N-1 && A[i] <= A[i+1]: 
+        i = i + 1; 
+    
+    i < N-1 && A[i] > A[i+1]:
+        temp = A[i];
+        A[i] = A[i+1];
+        A[i+1] = temp; 
+        i = 0;
+od
+
