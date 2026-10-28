@@ -1,0 +1,20 @@
+(define move (n start spare dest) 
+    (if (= n 1)
+        (block 
+            (print start) 
+            (print 0)
+            (print dest)
+        )
+        (block 
+            (move (- n 1) start dest spare) 
+            (print start)
+            (print 0)
+            (print dest)
+            (move (- n 1) spare start dest)
+        )
+    )
+) 
+(define main ()
+    (move 4 1 2 3)
+) 
+    
